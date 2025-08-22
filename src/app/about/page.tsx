@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-12 py-8 sm:py-12 bg-white dark:bg-gray-900 transition-colors">
-      <div className="max-w mx-auto px-4 sm:px-12">
+    <div className="w-full px-2 sm:px-6 lg:px-12 py-8 sm:py-12 bg-white dark:bg-gray-900 transition-colors">
+      <div className="max-w mx-auto px-2 sm:px-12">
         {/* Main Terminal Window */}
         <div className="bg-white dark:bg-gray-800 border border-[#dee2e6] dark:border-gray-700 rounded-lg overflow-hidden shadow-sm transition-colors">
           {/* Terminal Header */}
@@ -11,13 +11,13 @@ export default function About() {
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
-            <span className="text-sm text-[#6c757d] dark:text-gray-300 ml-2 transition-colors">
+            <span className="text-xs sm:text-sm text-[#6c757d] dark:text-gray-300 ml-2 transition-colors">
               akshay@dev:~/about
             </span>
           </div>
 
           {/* Terminal Content */}
-          <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm space-y-6">
+          <div className="p-2 sm:p-6 font-mono text-[13px] sm:text-sm space-y-4 sm:space-y-6">
             {/* Terminal Command */}
             <div className="flex items-center gap-2 text-sm mb-2">
               <span className="text-[#6c757d] dark:text-gray-400 transition-colors">
@@ -29,7 +29,7 @@ export default function About() {
             </div>
 
             {/* Introduction */}
-            <div className="pl-4">
+            <div className="pl-2 sm:pl-4">
               <div>
                 <p className="text-[#212529] dark:text-white mb-4 transition-colors text-sm sm:text-base">
                   Hey there! 👋 I&apos;m{" "}
@@ -48,7 +48,7 @@ export default function About() {
                   Fluent in multiple languages, I thrive in collaborative and
                   innovative environments.
                 </p>
-                <div className="text-[#6c757d] dark:text-gray-300 space-y-1 ml-4 transition-colors text-sm sm:text-base">
+                <div className="text-[#6c757d] dark:text-gray-300 space-y-1 ml-3 sm:ml-4 transition-colors text-sm sm:text-base">
                   <div className="text-[#66a4de] font-semibold">
                     → CISCO DUO Security{" "}
                     <span className="text-[#28a745] text-xs">[Current]</span>
@@ -72,7 +72,7 @@ export default function About() {
               <div className="border-t border-[#dee2e6] dark:border-gray-600 my-4 transition-colors"></div>
 
               {/* Personal Interests Section */}
-              <div className="border-l-4 border-[#66a4de] pl-4">
+              <div className="border-l-2 sm:border-l-4 border-[#66a4de] pl-3 sm:pl-4">
                 <h3 className="text-[#66a4de] font-semibold mb-3 text-base sm:text-lg">
                   Personal Interests
                 </h3>
@@ -90,7 +90,7 @@ export default function About() {
               <div className="border-t border-[#dee2e6] dark:border-gray-600 my-4 transition-colors"></div>
 
               {/* Technical Expertise Section */}
-              <div className="border-l-4 border-[#66a4de] pl-4">
+              <div className="border-l-2 sm:border-l-4 border-[#66a4de] pl-3 sm:pl-4">
                 <h3 className="text-[#66a4de] font-semibold mb-3 text-base sm:text-lg">
                   Technical Expertise
                 </h3>
@@ -116,7 +116,7 @@ export default function About() {
                       <strong>Programming Languages & Frameworks</strong>
                     </div>
                   </p>
-                  <div className="ml-4 space-y-1 text-sm">
+                  <div className="ml-3 sm:ml-4 space-y-1 text-sm">
                     <div>
                       • GO, JavaScript/TypeScript,Python, React, Next.js,
                       Node.js
@@ -144,7 +144,7 @@ export default function About() {
                       <strong>Databases & Messaging</strong>
                     </div>
                   </p>
-                  <div className="ml-4 space-y-1 text-sm">
+                  <div className="ml-3 sm:ml-4 space-y-1 text-sm">
                     <div>
                       • PostgreSQL, MongoDB, Redis, Firestore, GRPC, Temporal
                     </div>
@@ -169,7 +169,7 @@ export default function About() {
                       <strong>Security & Identity</strong>
                     </div>
                   </p>
-                  <div className="ml-4 space-y-1 text-sm">
+                  <div className="ml-3 sm:ml-4 space-y-1 text-sm">
                     <div>
                       • OAuth 2.0, OIDC, RBAC, CASBIN, Auth0, Duo Security
                     </div>
@@ -195,7 +195,7 @@ export default function About() {
                       <strong>Cloud & DevOps</strong>
                     </div>
                   </p>
-                  <div className="ml-4 space-y-1 text-sm">
+                  <div className="ml-3 sm:ml-4 space-y-1 text-sm">
                     <div>• AWS, Docker, Kubernetes</div>
                     <div>• CI/CD, Infrastructure as Code</div>
                     <div>• Microservices Architecture</div>
@@ -208,7 +208,7 @@ export default function About() {
               <div className="border-t border-[#dee2e6] dark:border-gray-600 my-4 transition-colors"></div>
 
               {/* Current Focus */}
-              <div className="border-l-4 border-[#28a745] pl-4">
+              <div className="border-l-2 sm:border-l-4 border-[#28a745] pl-3 sm:pl-4">
                 <h3 className="text-[#28a745] font-semibold mb-3 text-base sm:text-lg">
                   Currently Working On
                 </h3>

@@ -63,8 +63,8 @@ export default function Blog() {
       : blogPosts.filter((post) => post.tags.includes(selectedFilter));
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-12 py-8 sm:py-12 bg-white dark:bg-gray-900 transition-colors">
-      <div className="max-w mx-auto px-4 sm:px-12">
+    <div className="w-full px-2 sm:px-6 lg:px-12 py-8 sm:py-12 bg-white dark:bg-gray-900 transition-colors">
+      <div className="max-w mx-auto px sm:px-12">
         {/* Main Terminal Window */}
         <div className="bg-white dark:bg-gray-800 border border-[#dee2e6] dark:border-gray-700 rounded-lg overflow-hidden shadow-sm transition-colors">
           {/* Terminal Header */}
@@ -80,7 +80,7 @@ export default function Blog() {
           </div>
 
           {/* Terminal Content */}
-          <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm">
+          <div className="p-2 sm:p-6 font-mono text-xs sm:text-sm">
             {/* Header */}
             <div className="mb-6">
               <div className="flex items-center gap-2 text-sm mb-4">
