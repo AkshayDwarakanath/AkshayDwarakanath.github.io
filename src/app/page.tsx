@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -37,10 +38,10 @@ export default function Home() {
 
             <div className="flex gap-4">
               <Button className="bg-[#66a4de] hover:bg-[#5a94d1] rounded-none h-12 px-6">
-                Recent Posts
+                <Link href="/blog">Recent Posts</Link>
               </Button>
               <Button className="bg-[#66a4de] hover:bg-[#5a94d1] rounded-none h-12 px-6">
-                About Me
+                <Link href="/about">About Me</Link>
               </Button>
             </div>
           </div>

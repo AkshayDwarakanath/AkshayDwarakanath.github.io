@@ -11,7 +11,7 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "system";
+    const savedTheme = localStorage.getItem("theme") || "dark";
     setTheme(savedTheme);
     applyTheme(savedTheme);
   }, []);

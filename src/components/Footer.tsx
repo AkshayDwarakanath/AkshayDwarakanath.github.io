@@ -6,13 +6,13 @@ export default function Footer() {
       <div className="w-full px-6 py-8">
         <div className="flex items-center justify-center gap-6 text-[#6c757d] dark:text-gray-300">
           <a
-            href="#"
+            href="https://github.com/AkshayDwarakanath"
             className="hover:text-[#212529] dark:hover:text-white transition-colors"
           >
             <Github className="h-5 w-5" />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/akshaykomarla"
             className="hover:text-[#212529] dark:hover:text-white transition-colors"
           >
             <Linkedin className="h-5 w-5" />

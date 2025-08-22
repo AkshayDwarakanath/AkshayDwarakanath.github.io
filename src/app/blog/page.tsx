@@ -9,10 +9,8 @@ const allTags = [
   "go",
   "htm",
   "javascript",
-  "octoverse",
   "reactjs",
   "sql",
-  "svelte",
   "typescript",
   "web-dev",
 ];
