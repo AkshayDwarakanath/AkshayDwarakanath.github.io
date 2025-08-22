@@ -37,12 +37,16 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button className="bg-[#66a4de] hover:bg-[#5a94d1] rounded-none h-12 px-6 w-full sm:w-auto">
-                <Link href="/blog">Recent Posts</Link>
-              </Button>
-              <Button className="bg-[#66a4de] hover:bg-[#5a94d1] rounded-none h-12 px-6 w-full sm:w-auto">
-                <Link href="/about">About Me</Link>
-              </Button>
+              <Link href="/blog">
+                <Button className="bg-[#66a4de] hover:bg-[#5a94d1] rounded-none h-12 px-6 w-full sm:w-auto cursor-pointer">
+                  Recent Posts
+                </Button>
+              </Link>
+              <Link href="/about">
+                <Button className="bg-[#66a4de] hover:bg-[#5a94d1] rounded-none h-12 px-6 w-full sm:w-auto cursor-pointer">
+                  About Me
+                </Button>
+              </Link>
             </div>
           </div>
 
