@@ -63,8 +63,8 @@ export default function Blog() {
       : blogPosts.filter((post) => post.tags.includes(selectedFilter));
 
   return (
-    <div className="w-full px-12 py-12 bg-white dark:bg-gray-900 transition-colors">
-      <div className="max-w mx-auto px-12">
+    <div className="w-full px-4 sm:px-6 lg:px-12 py-8 sm:py-12 bg-white dark:bg-gray-900 transition-colors">
+      <div className="max-w mx-auto px-4 sm:px-12">
         {/* Main Terminal Window */}
         <div className="bg-white dark:bg-gray-800 border border-[#dee2e6] dark:border-gray-700 rounded-lg overflow-hidden shadow-sm transition-colors">
           {/* Terminal Header */}
@@ -74,33 +74,27 @@ export default function Blog() {
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
-            <span className="text-sm text-[#6c757d] dark:text-gray-300 ml-2 transition-colors">
+            <span className="text-xs sm:text-sm text-[#6c757d] dark:text-gray-300 ml-2 transition-colors">
               akshay@dev:~/blog
             </span>
           </div>
 
           {/* Terminal Content */}
-          <div className="p-6 font-mono text-sm">
+          <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm">
             {/* Header */}
             <div className="mb-6">
               <div className="flex items-center gap-2 text-sm mb-4">
-                <span className="text-[#6c757d] dark:text-gray-400 transition-colors">
-                  $
-                </span>
-                <span className="text-[#212529] dark:text-white transition-colors">
-                  ls recent_posts
-                </span>
+                <span className="text-[#6c757d] dark:text-gray-400 transition-colors">$</span>
+                <span className="text-[#212529] dark:text-white transition-colors">ls recent_posts</span>
               </div>
-              <h1 className="text-2xl font-bold text-[#66a4de] mb-2">
+              <h1 className="text-xl sm:text-2xl font-bold text-[#66a4de] mb-2">
                 📝 Recent Posts
               </h1>
             </div>
 
             {/* Filter Tags */}
             <div className="mb-6">
-              <div className="text-[#6c757d] dark:text-gray-400 text-xs mb-2 transition-colors">
-                filter:
-              </div>
+              <div className="text-[#6c757d] dark:text-gray-400 text-xs mb-2 transition-colors">filter:</div>
               <div className="flex flex-wrap gap-2">
                 {allTags.map((tag) => (
                   <button
@@ -122,25 +116,25 @@ export default function Blog() {
             <div className="grid md:grid-cols-2 gap-4">
               {filteredPosts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`}>
-                  <div className="bg-[#f8f9fa] dark:bg-gray-700 border border-[#dee2e6] dark:border-gray-600 rounded p-4 hover:bg-[#e9ecef] dark:hover:bg-gray-600 transition-colors cursor-pointer">
+                  <div className="bg-[#f8f9fa] dark:bg-gray-700 border border-[#dee2e6] dark:border-gray-600 rounded p-4 sm:p-5 hover:bg-[#e9ecef] dark:hover:bg-gray-600 transition-colors cursor-pointer">
                     {/* Post Header */}
-                    <div className="flex items-center justify-between text-xs text-[#6c757d] dark:text-gray-400 mb-2 transition-colors">
+                    <div className="flex items-center justify-between text-[11px] sm:text-xs text-[#6c757d] dark:text-gray-400 mb-2 transition-colors">
                       <span>~/{post.slug}</span>
                       <span>{post.readTime}</span>
                     </div>
 
                     {/* Post Title */}
-                    <h2 className="text-[#66a4de] font-semibold mb-2 hover:underline">
+                    <h2 className="text-[#66a4de] font-semibold mb-2 hover:underline text-sm sm:text-base">
                       {post.title}
                     </h2>
 
                     {/* Post Date */}
-                    <div className="text-xs text-[#6c757d] dark:text-gray-400 mb-2 transition-colors">
+                    <div className="text-[11px] sm:text-xs text-[#6c757d] dark:text-gray-400 mb-2 transition-colors">
                       {post.date}
                     </div>
 
                     {/* Post Excerpt */}
-                    <p className="text-xs text-[#212529] dark:text-gray-200 leading-relaxed mb-3 transition-colors">
+                    <p className="text-xs sm:text-sm text-[#212529] dark:text-gray-200 leading-relaxed mb-3 transition-colors">
                       {post.excerpt}
                     </p>
 
@@ -149,7 +143,7 @@ export default function Blog() {
                       {post.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-xs px-2 py-0.5 bg-white dark:bg-gray-600 border border-[#dee2e6] dark:border-gray-500 rounded text-[#6c757d] dark:text-gray-300 transition-colors"
+                          className="text-[11px] sm:text-xs px-2 py-0.5 bg-white dark:bg-gray-600 border border-[#dee2e6] dark:border-gray-500 rounded text-[#6c757d] dark:text-gray-300 transition-colors"
                         >
                           {tag}
                         </span>

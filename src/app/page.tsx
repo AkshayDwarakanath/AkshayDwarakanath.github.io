@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="w-full px-12 py-12 bg-white dark:bg-gray-900 transition-colors">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div className="w-full px-4 sm:px-6 lg:px-12 py-8 sm:py-12 bg-white dark:bg-gray-900 transition-colors">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
           {/* Left Column - Terminal */}
           <div className="space-y-8">
             <div className="space-y-4">
@@ -16,11 +16,11 @@ export default function Home() {
                 </span>
               </div>
 
-              <h1 className="text-4xl font-bold leading-tight text-[#212529] dark:text-white">
+              <h1 className="text-3xl sm:text-4xl font-bold leading-tight text-[#212529] dark:text-white">
                 Software Engineer and Tech Advisor
               </h1>
 
-              <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed">
+              <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                 With over 9 years of extensive experience in Software
                 Engineering, I collaborate with teams to develop
                 production-ready web applications and scalable systems, with a
@@ -36,11 +36,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex gap-4">
-              <Button className="bg-[#66a4de] hover:bg-[#5a94d1] rounded-none h-12 px-6">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button className="bg-[#66a4de] hover:bg-[#5a94d1] rounded-none h-12 px-6 w-full sm:w-auto">
                 <Link href="/blog">Recent Posts</Link>
               </Button>
-              <Button className="bg-[#66a4de] hover:bg-[#5a94d1] rounded-none h-12 px-6">
+              <Button className="bg-[#66a4de] hover:bg-[#5a94d1] rounded-none h-12 px-6 w-full sm:w-auto">
                 <Link href="/about">About Me</Link>
               </Button>
             </div>
@@ -61,7 +61,7 @@ export default function Home() {
             </div>
 
             {/* Terminal Content */}
-            <div className="p-4 font-mono text-sm space-y-1">
+            <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm space-y-1">
               <div className="text-[#6c757d] dark:text-gray-400">$ whoami</div>
               <div className="text-[#212529] dark:text-white">
                 Akshay Dwarakanath
@@ -120,7 +120,7 @@ export default function Home() {
       <div className="w-full h-px bg-[#dee2e6] dark:bg-gray-700" />
 
       {/* What I'm Up To Section */}
-      <div className="w-full px-12 py-12 bg-white dark:bg-gray-800 transition-colors">
+      <div className="w-full px-4 sm:px-6 lg:px-12 py-8 sm:py-12 bg-white dark:bg-gray-800 transition-colors">
         <div className="space-y-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-lg">
@@ -129,20 +129,20 @@ export default function Home() {
                 cat ~/current-focus
               </span>
             </div>
-            <h2 className="text-2xl font-bold leading-tight text-[#212529] dark:text-white">
+            <h2 className="text-xl sm:text-2xl font-bold leading-tight text-[#212529] dark:text-white">
               What I&apos;m Up To
             </h2>
           </div>
 
           <div className="space-y-6">
-            <div className="bg-[#f8f9fa] dark:bg-gray-700 border-l-4 border-l-[#66a4de] p-6 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="text-xl mt-1">🚀</div>
+            <div className="bg-[#f8f9fa] dark:bg-gray-700 border-l-4 border-l-[#66a4de] p-4 sm:p-6 shadow-sm">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="text-lg sm:text-xl mt-1">🚀</div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-[#212529] dark:text-white mb-3">
+                  <h3 className="text-base sm:text-lg font-semibold text-[#212529] dark:text-white mb-2 sm:mb-3">
                     Building Scalable Cloud-Native Systems
                   </h3>
-                  <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed">
+                  <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                     Architecting and developing scalable microservices and
                     distributed systems using Golang, Node.js, Next.js,
                     Kubernetes, Temporal workflow orchestration, and multi-cloud
@@ -152,14 +152,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-[#f8f9fa] dark:bg-gray-700 border-l-4 border-l-[#66a4de] p-6 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="text-xl mt-1">🛡️</div>
+            <div className="bg-[#f8f9fa] dark:bg-gray-700 border-l-4 border-l-[#66a4de] p-4 sm:p-6 shadow-sm">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="text-lg sm:text-xl mt-1">🛡️</div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-[#212529] dark:text-white mb-3">
+                  <h3 className="text-base sm:text-lg font-semibold text-[#212529] dark:text-white mb-2 sm:mb-3">
                     IAM & Security Engineering
                   </h3>
-                  <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed">
+                  <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                     Driving secure identity and access management solutions with
                     OAuth 2.0, OIDC, RBAC, and multi-tenant SSO implementations
                     that enable seamless and safe user authentication.
@@ -168,14 +168,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-[#f8f9fa] dark:bg-gray-700 border-l-4 border-l-[#66a4de] p-6 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="text-xl mt-1">✍️</div>
+            <div className="bg-[#f8f9fa] dark:bg-gray-700 border-l-4 border-l-[#66a4de] p-4 sm:p-6 shadow-sm">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="text-lg sm:text-xl mt-1">✍️</div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-[#212529] dark:text-white mb-3">
+                  <h3 className="text-base sm:text-lg font-semibold text-[#212529] dark:text-white mb-2 sm:mb-3">
                     Writing & Sharing
                   </h3>
-                  <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed">
+                  <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                     Regularly writing technical articles about web development,
                     best practices, and lessons learned. I believe in sharing
                     knowledge to help the developer community grow.

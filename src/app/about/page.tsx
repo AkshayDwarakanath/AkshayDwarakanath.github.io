@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <div className="w-full px-12 py-12 bg-white dark:bg-gray-900 transition-colors">
-      <div className="max-w mx-auto px-12">
+    <div className="w-full px-4 sm:px-6 lg:px-12 py-8 sm:py-12 bg-white dark:bg-gray-900 transition-colors">
+      <div className="max-w mx-auto px-4 sm:px-12">
         {/* Main Terminal Window */}
         <div className="bg-white dark:bg-gray-800 border border-[#dee2e6] dark:border-gray-700 rounded-lg overflow-hidden shadow-sm transition-colors">
           {/* Terminal Header */}
@@ -17,7 +17,7 @@ export default function About() {
           </div>
 
           {/* Terminal Content */}
-          <div className="p-6 font-mono text-sm space-y-6">
+          <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm space-y-6">
             {/* Terminal Command */}
             <div className="flex items-center gap-2 text-sm mb-2">
               <span className="text-[#6c757d] dark:text-gray-400 transition-colors">
@@ -31,11 +31,11 @@ export default function About() {
             {/* Introduction */}
             <div className="pl-4">
               <div>
-                <p className="text-[#212529] dark:text-white mb-4 transition-colors">
+                <p className="text-[#212529] dark:text-white mb-4 transition-colors text-sm sm:text-base">
                   Hey there! 👋 I&apos;m{" "}
                   <span className="text-[#66a4de] font-semibold">Akshay D</span>
                 </p>
-                <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed mb-4 transition-colors">
+                <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed mb-4 transition-colors text-sm sm:text-base">
                   I am a Software Engineer with over 9 years of experience
                   specializing in building scalable, secure, and
                   high-performance cloud-native applications. I have strong
@@ -48,7 +48,7 @@ export default function About() {
                   Fluent in multiple languages, I thrive in collaborative and
                   innovative environments.
                 </p>
-                <div className="text-[#6c757d] dark:text-gray-300 space-y-1 ml-4 transition-colors">
+                <div className="text-[#6c757d] dark:text-gray-300 space-y-1 ml-4 transition-colors text-sm sm:text-base">
                   <div className="text-[#66a4de] font-semibold">
                     → CISCO DUO Security{" "}
                     <span className="text-[#28a745] text-xs">[Current]</span>
@@ -58,7 +58,7 @@ export default function About() {
                   <div>→ Terrace Tech Labs</div>
                   <div>→ Hexwhale Technologies</div>
                 </div>
-                <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed mt-4 transition-colors">
+                <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed mt-4 transition-colors text-sm sm:text-base">
                   It&apos;s been an interesting journey that&apos;s for sure.
                   I&apos;m super passionate about staying on top of changes in
                   the industry and I&apos;m always trying to learn new skills
@@ -73,10 +73,10 @@ export default function About() {
 
               {/* Personal Interests Section */}
               <div className="border-l-4 border-[#66a4de] pl-4">
-                <h3 className="text-[#66a4de] font-semibold mb-3">
+                <h3 className="text-[#66a4de] font-semibold mb-3 text-base sm:text-lg">
                   Personal Interests
                 </h3>
-                <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed transition-colors">
+                <p className="text-[#6c757d] dark:text-gray-300 leading-relaxed transition-colors text-sm sm:text-base">
                   In my free time, I love tinkering around my home automation
                   systems leveraging IoT technologies to make my life easier.
                   I’m also passionate about exploring hydroponics—using
@@ -91,10 +91,10 @@ export default function About() {
 
               {/* Technical Expertise Section */}
               <div className="border-l-4 border-[#66a4de] pl-4">
-                <h3 className="text-[#66a4de] font-semibold mb-3">
+                <h3 className="text-[#66a4de] font-semibold mb-3 text-base sm:text-lg">
                   Technical Expertise
                 </h3>
-                <div className="text-[#6c757d] dark:text-gray-300 transition-colors">
+                <div className="text-[#6c757d] dark:text-gray-300 transition-colors text-sm sm:text-base">
                   <p className="my-2">
                     <div className="flex items-center gap-2">
                       <svg
@@ -209,10 +209,10 @@ export default function About() {
 
               {/* Current Focus */}
               <div className="border-l-4 border-[#28a745] pl-4">
-                <h3 className="text-[#28a745] font-semibold mb-3">
+                <h3 className="text-[#28a745] font-semibold mb-3 text-base sm:text-lg">
                   Currently Working On
                 </h3>
-                <div className="text-[#6c757d] dark:text-gray-300 space-y-1 transition-colors">
+                <div className="text-[#6c757d] dark:text-gray-300 space-y-1 transition-colors text-sm sm:text-base">
                   <p className="my-2 mt-4">
                     <div className="flex items-center gap-2">
                       <svg
