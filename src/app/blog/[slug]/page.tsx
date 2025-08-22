@@ -3,11 +3,7 @@ import { notFound } from 'next/navigation'
 import { ArrowLeft } from 'lucide-react'
 import { getPostData, getSortedPostsData } from '../../../../lib/blog'
 
-interface BlogPostProps {
-  params: {
-    slug: string
-  }
-}
+type Params = { slug: string }
 
 export function generateStaticParams() {
   try {
@@ -28,9 +24,10 @@ export function generateStaticParams() {
   }
 }
 
-export async function generateMetadata({ params }: BlogPostProps) {
+export async function generateMetadata({ params }: { params: Promise<Params> }) {
   try {
-    const post = await getPostData(params.slug)
+    const { slug } = await params
+    const post = await getPostData(slug)
     return {
       title: `${post.title} | Akshay D`,
       description: post.excerpt,
@@ -55,11 +52,12 @@ export async function generateMetadata({ params }: BlogPostProps) {
   }
 }
 
-export default async function BlogPost({ params }: BlogPostProps) {
+export default async function BlogPost({ params }: { params: Promise<Params> }) {
   let post
   
   try {
-    post = await getPostData(params.slug)
+    const { slug } = await params
+    post = await getPostData(slug)
   } catch {
     notFound()
   }
