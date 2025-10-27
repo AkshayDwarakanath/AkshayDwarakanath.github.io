@@ -1,11 +1,18 @@
 {
-  "name": "akshay-portfolio",
+  "name": "akshay-portfolio-monorepo",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "blog"
+  ],
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "export": "next build",
+    "dev": "next dev",
+    "dev:blog": "cd blog && npm start",
+    "build": "npm run build:portfolio && npm run build:blog && npm run combine",
+    "build:portfolio": "next build",
+    "build:blog": "cd blog && npm run build",
+    "combine": "node scripts/combine-builds.js",
+    "export": "npm run build",
     "start": "next start",
     "lint": "eslint"
   },

@@ -27,8 +27,11 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: Install dependencies (root)
         run: npm ci
+
+      - name: Install dependencies (blog)
+        run: cd blog && npm ci
 
       - name: Determine BASE_PATH
         id: base
@@ -41,12 +44,22 @@ jobs:
             echo "BASE_PATH=/$REPO_NAME" >> $GITHUB_OUTPUT
           fi
 
-      - name: Build (Next static export)
+      - name: Build Portfolio (Next.js)
         env:
           BASE_PATH: ${{ steps.base.outputs.BASE_PATH }}
         run: |
-          echo "Using BASE_PATH='${BASE_PATH}'"
-          npm run build
+          echo "Building Next.js portfolio with BASE_PATH='${BASE_PATH}'"
+          npm run build:portfolio
+
+      - name: Build Blog (Docusaurus)
+        run: |
+          echo "Building Docusaurus blog"
+          npm run build:blog
+
+      - name: Combine Builds
+        run: |
+          echo "Combining portfolio and blog builds"
+          npm run combine
           # Create .nojekyll to prevent GH Pages from ignoring files/folders starting with _
           touch out/.nojekyll
 
