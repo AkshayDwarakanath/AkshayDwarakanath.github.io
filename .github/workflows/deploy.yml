@@ -27,11 +27,8 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install dependencies (root)
-        run: npm ci
-
-      - name: Install dependencies (blog)
-        run: cd blog && npm ci
+      - name: Install dependencies (all workspaces)
+        run: npm ci --workspaces --include-workspace-root
 
       - name: Determine BASE_PATH
         id: base
