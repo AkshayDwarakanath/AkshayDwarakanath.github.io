@@ -16,8 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Akshay - Full Stack Developer",
-  description: "Portfolio of Akshay - Full Stack Developer specializing in modern web technologies",
+  title: "Akshay D",
+  description:
+    "Software Engineer, Security & IAM Specialist, Cloud-Native Systems Architect",
 };
 
 export default function RootLayout({
@@ -32,9 +33,7 @@ export default function RootLayout({
       >
         <SmoothScroll />
         <Header />
-        <main className="flex-1">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
