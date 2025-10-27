@@ -11,6 +11,22 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Exclude blog directory from Next.js compilation
+  webpack: (config: any) => {
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: ['**/blog/**', '**/node_modules/**'],
+    };
+    return config;
+  },
+  // Exclude blog from TypeScript checking
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
+    dirs: ['src', 'app'], // Only lint Next.js directories
+  },
 };
 
 module.exports = nextConfig
