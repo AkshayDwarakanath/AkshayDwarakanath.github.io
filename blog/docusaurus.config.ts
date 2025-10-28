@@ -76,7 +76,8 @@ const config: Config = {
         {
           href: 'https://akshaydwarakanath.github.io/',
           label: '← Back to Portfolio',
-          position: 'left',
+          position: 'right',
+          target: '_self',
         },
         {to: '/tags', label: 'Tags', position: 'left'},
         {to: '/archive', label: 'Archive', position: 'left'},
@@ -96,14 +97,17 @@ const config: Config = {
             {
               label: 'Home',
               href: 'https://akshaydwarakanath.github.io/',
+              target: '_self',
             },
             {
               label: 'About',
               href: 'https://akshaydwarakanath.github.io/about',
+              target: '_self',
             },
             {
               label: 'Projects',
               href: 'https://akshaydwarakanath.github.io/',
+              target: '_self',
             },
           ],
         },

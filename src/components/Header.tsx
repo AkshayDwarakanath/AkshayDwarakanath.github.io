@@ -128,6 +128,7 @@ export default function Header() {
             </Link>
             <Link
               href="/blog"
+              target="_blank"
               className="text-[#6c757d] dark:text-gray-300 hover:text-[#212529] dark:hover:text-white transition-colors font-medium"
             >
               <div className="flex items-center gap-2">
