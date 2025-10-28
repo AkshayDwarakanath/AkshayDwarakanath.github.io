@@ -60,6 +60,31 @@ p10k configure
 
 If you ever want to reconfigure it, just run `p10k configure` again.
 
+## :star: FZF - Fuzzy Finder :star: 
+
+**fzf** is probably one of the most powerful additions to this setup. It's a command-line fuzzy finder that gives you interactive filtering for pretty much anything - files, command history, processes, you name it.
+
+_**This plugin is so good that I use it for everything. I use it to find files, navigate directories, search through git history, and even to find commands in my shell history.**_
+
+_**I may write a dedicated blog post about it in the future.**_ :wink:
+
+Install it via Homebrew:
+
+```bash
+
+brew install fzf
+
+```
+
+To set up shell integration (key bindings and fuzzy completion), add this to your `~/.zshrc`:
+
+```bash
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+```
+
 ## Plugins That Actually Matter
 
 Here are the plugins I have in my `~/.zshrc`:
@@ -116,31 +141,6 @@ brew install autojump
 
 After installing these plugins, add them to the `plugins` array in your `~/.zshrc` and run `source ~/.zshrc` to reload your configuration.
 
-### FZF - Fuzzy Finder
-
-**fzf** is probably one of the most powerful additions to this setup. It's a command-line fuzzy finder that gives you interactive filtering for pretty much anything - files, command history, processes, you name it.
-
-_**This plugin is so good that I use it for everything. I use it to find files, navigate directories, search through git history, and even to find commands in my shell history.**_
-
-_**I may write a dedicated blog post about it in the future.**_ :wink:
-
-Install it via Homebrew:
-
-```bash
-
-brew install fzf
-
-```
-
-To set up shell integration (key bindings and fuzzy completion), add this to your `~/.zshrc`:
-
-```bash
-
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-
-```
-
 ## Vim
 
 **Vim** comes pre-installed on macOS. I mainly use it for quick edits in the terminal - changing config files, editing commit messages, that sort of thing. Not doing anything fancy with my vim config at the moment, just using the defaults.
@@ -151,7 +151,7 @@ source <(fzf --zsh)
 
 ![TheFuck](https://raw.githubusercontent.com/nvbn/thefuck/master/example.gif)
 
-Install it via pip or Homebrew:
+Install it via Homebrew:
 
 ```bash
 
