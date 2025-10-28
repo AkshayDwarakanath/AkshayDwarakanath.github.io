@@ -1,19 +1,44 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+terminal:
+  label: Terminal
+  permalink: /terminal
+  description: Terminal setup and configuration
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+zsh:
+  label: Zsh
+  permalink: /zsh
+  description: Zsh shell and Oh My Zsh
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+macos:
+  label: macOS
+  permalink: /macos
+  description: macOS development and tools
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+development:
+  label: Development
+  permalink: /development
+  description: Development tools and workflows
+
+productivity:
+  label: Productivity
+  permalink: /productivity
+  description: Productivity tips and tools
+
+nextjs:
+  label: Next.js
+  permalink: /nextjs
+  description: Next.js framework and development
+
+typescript:
+  label: TypeScript
+  permalink: /typescript
+  description: TypeScript programming
+
+react:
+  label: React
+  permalink: /react
+  description: React library and components
+
+web-development:
+  label: Web Development
+  permalink: /web-development
+  description: Web development and best practices

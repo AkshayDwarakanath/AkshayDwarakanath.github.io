@@ -76,7 +76,7 @@ const config: Config = {
         {
           href: 'https://akshaydwarakanath.github.io/',
           label: '← Back to Portfolio',
-          position: 'left',
+          position: 'right',
           target: '_self',
         },
         {to: '/tags', label: 'Tags', position: 'left'},
