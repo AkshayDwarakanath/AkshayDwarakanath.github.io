@@ -42,3 +42,23 @@ web-development:
   label: Web Development
   permalink: /web-development
   description: Web development and best practices
+
+iam:
+  label: IAM
+  permalink: /iam
+  description: Identity and Access Management
+
+security:
+  label: Security
+  permalink: /security
+  description: Security and cybersecurity topics
+
+duo-security:
+  label: Duo Security
+  permalink: /duo-security
+  description: Cisco Duo Security platform and features
+
+zero-trust:
+  label: Zero Trust
+  permalink: /zero-trust
+  description: Zero Trust security architecture

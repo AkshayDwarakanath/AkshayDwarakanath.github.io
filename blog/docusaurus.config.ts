@@ -41,6 +41,8 @@ const config: Config = {
       {
         docs: false, // Disable docs, we only want blog
         blog: {
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'Recent Posts',
           routeBasePath: '/', // Blog at root of /blog/
           showReadingTime: true,
           feedOptions: {
@@ -59,6 +61,12 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
+  themes: ['@docusaurus/theme-mermaid'],
+  
+  markdown: {
+    mermaid: true,
+  },
 
   themeConfig: {
     // Replace with your project's social card

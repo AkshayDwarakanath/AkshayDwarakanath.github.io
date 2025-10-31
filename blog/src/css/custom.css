@@ -37,8 +37,3 @@
   --ifm-footer-background-color: #1e2939;
   --ifm-background-color: #101828;
 }
-
-/* Hide external link icon from navbar links */
-.navbar__link .iconExternalLink_nPIU {
-  display: none;
-}
