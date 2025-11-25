@@ -69,8 +69,14 @@ const config: Config = {
   },
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // Social card for link previews (Open Graph / Twitter Card)
+    metadata: [
+      {name: 'description', content: 'Software Engineering, Web Development, IAM, Security & Technology blog by Akshay Dwarakanath'},
+      {name: 'keywords', content: 'software engineering, web development, IAM, security, technology, blog'},
+      {property: 'og:type', content: 'website'},
+      {property: 'og:site_name', content: "Akshay's Blog"},
+      {name: 'twitter:card', content: 'summary_large_image'},
+    ],
     colorMode: {
       respectPrefersColorScheme: true,
     },
