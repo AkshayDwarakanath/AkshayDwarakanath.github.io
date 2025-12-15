@@ -1,6 +1,6 @@
 ---
 title: "Part 3 - Building Google OAuth 2.0 + OIDC from Scratch — A Hands-On Implementation Guide"
-description: "A developer-friendly introduction to OAuth, OIDC, SSO, tokens, flows, and how they come together in real-world applications."
+description: "Learn how to build a real Google OAuth implementation with Next.js and Express—step by step. We'll cover the OAuth 2.0 Authorization Code Flow with OpenID Connect (OIDC) scopes, JWT-based authentication, and protected API endpoints. By the end, you'll have a working template for adding 'Sign in with Google' to any web app."
 authors: [akshay]
 tags:
   [
@@ -33,6 +33,8 @@ By the end, you'll have a working template for adding "Sign in with Google" to a
 {/* truncate */}
 
 In [Part 2](/blog/2025/11/25/OAuth%202.0-OAuth%202.1-OIDC-&-SSO—a-practical-primer), we covered the theory behind OAuth 2.0, OpenID Connect, SSO, and tokens. Now it's time to get our hands dirty.
+
+**Check out the [source code](https://github.com/AkshayDwarakanath/google-oauth-oidc-demo) for this post on GitHub.**
 
 ---
 
@@ -316,6 +318,20 @@ eyJpc3MiOiJodHRwczovL...  ← Payload (claims)
 SflKxwRJSMeKKF2QT4fw...  ← Signature
 ```
 
+You get it only if you used OIDC (i.e., scope includes openid)
+```
+scope: ["openid", "profile", "email"]
+```
+If you only use pure OAuth2 (no OIDC), you will not receive an ID token.
+
+#### Issued by
+The Identity Provider (IdP) — e.g., Google, Okta, Auth0, Keycloak, Azure AD.
+
+#### Used by
+The client app (SPA, mobile app, web app), not APIs.
+
+
+
 #### Decoded Claims:
 
 | Claim     | Example                                     | Meaning                      |
@@ -343,6 +359,12 @@ ya29.a0ARrdaM8J4x5KhTpZ9Q3...
 - **Lifetime:** ~1 hour
 - **Validation:** Call Google's tokeninfo endpoint
 
+#### Issued by
+Authorization Server / IdP.
+
+#### Used by
+The API, provided by the client app.
+
 ### Refresh Token
 
 A **long-lived token** used to obtain new access tokens without user interaction.
@@ -354,6 +376,20 @@ A **long-lived token** used to obtain new access tokens without user interaction
 - **Purpose:** Get new access tokens when they expire
 - **Lifetime:** Until revoked
 - **Storage:** Must be stored securely (encrypted, server-side)
+
+#### Comparison Table
+
+| Feature                                 | ID Token                  | Access Token               |
+| --------------------------------------- | ------------------------- | -------------------------- |
+| Purpose                                 | Authentication (identity) | Authorization (API access) |
+| Audience                                | Client app                | API (resource server)      |
+| Validates user identity?                | ✔ Yes                     | ❌ No                       |
+| Contains scopes/permissions?            | ❌ No                      | ✔ Yes                      |
+| Used in `Authorization: Bearer` header? | ❌ No                      | ✔ Yes                      |
+| Format                                  | Always JWT                | JWT or opaque              |
+| Should be stored client-side?           | Yes                       | Yes (securely)             |
+| Should APIs accept it?                  | ❌ No                      | ✔ Yes                      |
+
 
 ---
 
