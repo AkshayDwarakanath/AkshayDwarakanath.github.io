@@ -68,6 +68,14 @@ const config: Config = {
     mermaid: true,
   },
 
+  scripts: [
+    {
+      src: 'https://static.cloudflareinsights.com/beacon.min.js',
+      defer: true,
+      'data-cf-beacon': '{"token": "2579bdee3fe14fa99b72d76b993557bd"}',
+    },
+  ],
+
   themeConfig: {
     // Social card for link previews (Open Graph / Twitter Card)
     image: 'img/social-card.png',

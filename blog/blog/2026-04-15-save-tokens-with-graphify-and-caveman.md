@@ -7,6 +7,10 @@ tags: [ai, developer-tools, productivity, llm, token-optimization]
 date: 2026-04-15
 ---
 
+**TL;DR**: Graphify builds a knowledge graph of your codebase so your AI assistant reads ~71x fewer input tokens per query. Caveman makes the assistant respond in terse caveman-speak for ~75% fewer output tokens. Both are open-source, both install in one command.
+
+---
+
 I've been using Codex and Claude Code pretty heavily for the last few months, and the token usage started getting noticeable. Not catastrophic, but enough that I started paying attention to *where* the tokens were actually going.
 
 This got worse recently — Anthropic [silently reduced Claude Code's session limits](https://www.reddit.com/r/ClaudeCode/comments/1s2lye7/claude_code_limits_were_silently_reduced_and_its/) during peak hours. If you use Claude Code on weekdays between 5am–11am PT, you now burn through your 5-hour session limit much faster than before. Your weekly limit hasn't changed, but in practice you're hitting the wall way sooner. A lot of people on r/ClaudeCode were caught off guard by this since there was no announcement — Anthropic only confirmed it after the backlash. Some folks have already started shifting to Codex because of this.
@@ -16,6 +20,7 @@ So between rising costs and tighter limits, I started looking into ways to waste
 I found two open-source tools that help with this — **Graphify** for the input side and **Caveman** for the output side. Here's what I've learned using them.
 
 <!--truncate-->
+
 
 ## Where the tokens actually go
 
