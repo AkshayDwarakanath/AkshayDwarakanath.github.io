@@ -74,6 +74,12 @@ const config: Config = {
       defer: true,
       'data-cf-beacon': '{"token": "2579bdee3fe14fa99b72d76b993557bd"}',
     },
+    {
+      src: 'https://embed.tawk.to/69dfd3963f5fe21c385b014a/1jm9551og',
+      async: true,
+      charset: 'UTF-8',
+      crossorigin: '*',
+    },
   ],
 
   themeConfig: {
