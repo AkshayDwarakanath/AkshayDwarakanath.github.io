@@ -70,6 +70,7 @@ const config: Config = {
 
   themeConfig: {
     // Social card for link previews (Open Graph / Twitter Card)
+    image: 'img/social-card.png',
     metadata: [
       {name: 'description', content: 'Software Engineering, Web Development, IAM, Security & Technology blog by Akshay Dwarakanath'},
       {name: 'keywords', content: 'software engineering, web development, IAM, security, technology, blog'},

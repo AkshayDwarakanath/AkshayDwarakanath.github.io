@@ -62,3 +62,28 @@ zero-trust:
   label: Zero Trust
   permalink: /zero-trust
   description: Zero Trust security architecture
+
+ai:
+  label: AI
+  permalink: /ai
+  description: Artificial Intelligence and machine learning
+
+code-review:
+  label: Code Review
+  permalink: /code-review
+  description: Code review practices and tools
+
+developer-tools:
+  label: Developer Tools
+  permalink: /developer-tools
+  description: Tools and utilities for developers
+
+llm:
+  label: LLM
+  permalink: /llm
+  description: Large Language Models and related tooling
+
+token-optimization:
+  label: Token Optimization
+  permalink: /token-optimization
+  description: Techniques and tools for reducing LLM token usage
