@@ -1,3 +1,20 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "About Akshay Dwarakanath — Software Engineer at Cisco Duo specializing in IAM, security, cloud-native systems, and scalable web applications.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Akshay D",
+    description:
+      "Software Engineer at Cisco Duo specializing in IAM, security, cloud-native systems, and scalable web applications.",
+    url: "https://akshaydwarakanath.github.io/about/",
+  },
+};
+
 export default function About() {
   return (
     <div className="w-full px-2 sm:px-6 lg:px-12 py-8 sm:py-12 bg-white dark:bg-gray-900 transition-colors">

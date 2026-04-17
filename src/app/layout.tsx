@@ -16,10 +16,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://akshaydwarakanath.github.io";
+
 export const metadata: Metadata = {
-  title: "Akshay D",
+  title: {
+    default: "Akshay D — Software Engineer & Security Specialist",
+    template: "%s | Akshay D",
+  },
   description:
-    "Software Engineer, Security & IAM Specialist, Cloud-Native Systems Architect",
+    "Software Engineer with 9+ years of experience in cloud-native systems, IAM & security, and scalable web applications. Currently at Cisco Duo.",
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: "Akshay D",
+    title: "Akshay D — Software Engineer & Security Specialist",
+    description:
+      "Software Engineer with 9+ years of experience in cloud-native systems, IAM & security, and scalable web applications.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Akshay D — Software Engineer & Security Specialist",
+    description:
+      "Software Engineer with 9+ years of experience in cloud-native systems, IAM & security, and scalable web applications.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  verification: {
+    google: "bYEu7Wl7q55FYLGiQ3-s3K1NOGOPpgxYkUdq2_6R4fw",
+  },
 };
 
 export default function RootLayout({

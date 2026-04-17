@@ -1,9 +1,59 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Akshay D — Software Engineer & Security Specialist",
+  description:
+    "Software Engineer with 9+ years of experience building scalable cloud-native systems, IAM solutions, and secure web applications. Currently at Cisco Duo.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Akshay D — Software Engineer & Security Specialist",
+    description:
+      "Software Engineer with 9+ years of experience building scalable cloud-native systems, IAM solutions, and secure web applications.",
+    url: "https://akshaydwarakanath.github.io/",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  mainEntity: {
+    "@type": "Person",
+    name: "Akshay Dwarakanath",
+    alternateName: "Akshay D",
+    url: "https://akshaydwarakanath.github.io",
+    jobTitle: "Software Engineer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Cisco Duo Security",
+    },
+    knowsAbout: [
+      "Software Engineering",
+      "IAM & Security",
+      "OAuth 2.0",
+      "OIDC",
+      "Kubernetes",
+      "Golang",
+      "TypeScript",
+      "Cloud-Native Systems",
+    ],
+    sameAs: [
+      "https://github.com/AkshayDwarakanath",
+      "https://linkedin.com/in/akshaydwarakanath",
+    ],
+  },
+};
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="w-full px-4 sm:px-6 lg:px-12 py-8 sm:py-12 bg-white dark:bg-gray-900 transition-colors">
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
           {/* Left Column - Terminal */}

@@ -86,6 +86,7 @@ const config: Config = {
     // Social card for link previews (Open Graph / Twitter Card)
     image: 'img/social-card.png',
     metadata: [
+      {name: 'google-site-verification', content: 'bYEu7Wl7q55FYLGiQ3-s3K1NOGOPpgxYkUdq2_6R4fw'},
       {name: 'description', content: 'Software Engineering, Web Development, IAM, Security & Technology blog by Akshay Dwarakanath'},
       {name: 'keywords', content: 'software engineering, web development, IAM, security, technology, blog'},
       {property: 'og:type', content: 'website'},
