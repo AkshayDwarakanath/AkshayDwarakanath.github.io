@@ -74,17 +74,18 @@ const config: Config = {
       defer: true,
       'data-cf-beacon': '{"token": "2579bdee3fe14fa99b72d76b993557bd"}',
     },
+  ],
+  headTags: [
     {
-      src: 'https://embed.tawk.to/69dfd3963f5fe21c385b014a/1jm9551og',
-      async: true,
-      charset: 'UTF-8',
-      crossorigin: '*',
+      tagName: 'script',
+      attributes: { id: 'tawk-to-lazy' },
+      innerHTML: `setTimeout(function(){var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];s1.async=true;s1.src="https://embed.tawk.to/69dfd3963f5fe21c385b014a/1jm9551og";s1.charset="UTF-8";s1.setAttribute("crossorigin","*");s0.parentNode.insertBefore(s1,s0);},5000);`,
     },
   ],
 
   themeConfig: {
     // Social card for link previews (Open Graph / Twitter Card)
-    image: 'img/social-card.png',
+    image: 'img/og-image.svg',
     metadata: [
       {name: 'google-site-verification', content: 'bYEu7Wl7q55FYLGiQ3-s3K1NOGOPpgxYkUdq2_6R4fw'},
       {name: 'description', content: 'Software Engineering, Web Development, IAM, Security & Technology blog by Akshay Dwarakanath'},
@@ -100,7 +101,8 @@ const config: Config = {
       title: "Akshay's Blog",
       logo: {
         alt: 'Akshay Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo-light.svg',
+        srcDark: 'img/logo-dark.svg',
       },
       items: [
         {
