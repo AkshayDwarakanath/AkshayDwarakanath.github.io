@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://akshaydwarakanath.github.io/sitemap.xml
-Sitemap: https://akshaydwarakanath.github.io/blog/sitemap.xml
